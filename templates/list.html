@@ -1,0 +1,7 @@
+<h1>Pedigrees by {{ username }}</h1>
+
+<ul id="pedigree_list">
+	{% for pedigree in pedigrees %}
+	<li><a href="/{{ username }}/view/{{ pedigree.slug }}">{{ pedigree.slug }}</a></li>
+	{% endfor %}
+</ul>

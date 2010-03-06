@@ -1,0 +1,13 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>{{ title }}</title>
+	<link href="/css/pedigree.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+	<div id="banner_container"><div id="banner"><a href="/">Home</a>{% if logged_in %} | <a href="{{ list_url }}">My Pedigrees</a>{% endif %}<span style="float: right"><a href="{{ url }}">{{ url_linktext }}</a></span></div></div>
+	<div id="page">

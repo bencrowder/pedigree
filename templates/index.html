@@ -1,0 +1,49 @@
+<h1>Make a new pedigree chart.</h1>
+
+<form id="add_form" method="post" action="/add">
+	<div id="url_container">
+		URL: <span class="url">{{ base_url }}</span><input type="text" id="slug" name="slug" />
+	</div>
+
+	<table cellpadding="0" cellspacing="0" border="0" id="add_table">
+		<tr>
+			<td rowspan="4" class="head"><textarea tabindex="1" id="root" name="root"></textarea></td>
+			<td rowspan="2" class="head"><textarea tabindex="3" id="root_father" name="root_father"></textarea></td>
+			<td class="head"><textarea tabindex="5" id="root_father_father" name="root_father_father"></textarea></td>
+		</tr>
+		<tr>
+			<td class="tail leftborder"><textarea tabindex="6" id="root_father_father_tail" name="root_father_father_tail"></textarea></td>
+		</tr>
+		<tr>
+			<td rowspan="2" class="tail leftborder"><textarea tabindex="4" id="root_father_tail" name="root_father_tail"></textarea></td>
+			<td class="head leftborder"><textarea tabindex="7" id="root_father_mother" name="root_father_mother"></textarea></td>
+		</tr>
+		<tr>
+			<td class="tail"><textarea tabindex="8" id="root_father_mother_tail" name="root_father_mother_tail"></textarea></td>
+		</tr>
+		<tr>
+			<td rowspan="4" class="tail"><textarea tabindex="2" id="root_tail" name="root_tail"></textarea></td>
+			<td rowspan="2" class="head leftborder"><textarea tabindex="9" id="root_mother" name="root_mother"></textarea></td>
+			<td class="head"><textarea tabindex="11" id="root_mother_father" name="root_mother_father"></textarea></td>
+		</tr>
+		<tr>
+			<td class="tail leftborder"><textarea tabindex="12" id="root_mother_father_tail" name="root_mother_father_tail"></textarea></td>
+		</tr>
+		<tr>
+			<td rowspan="2" class="tail"><textarea tabindex="10" id="root_mother_tail" name="root_mother_tail"></textarea></td>
+			<td class="head leftborder"><textarea tabindex="13" id="root_mother_mother" name="root_mother_mother"></textarea></td>
+		</tr>
+		<tr>
+			<td class="tail"><textarea tabindex="14" id="root_mother_mother_tail" name="root_mother_mother_tail"></textarea></td>
+		</tr>
+		<tr>
+	</table>
+
+	<div id="add_page">
+		<h2>Notes</h2>
+
+		<textarea id="notes" name="notes"></textarea>
+
+		<input type="submit" id="save_pedigree" value="Save This Pedigree" />
+	</div>
+</form>
