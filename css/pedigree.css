@@ -46,3 +46,6 @@ ul#pedigree_list				{ list-style: none; padding: 5px 0; border-top: solid 2px #d
 ul#pedigree_list li				{ padding: 4px 0; }
 ul#pedigree_list li a			{ font-weight: bold; color: #000; }
 ul#pedigree_list li a:hover		{ background: #eee; }
+
+#notes							{ width: 600px; font-size: .8em; margin: 0px auto; margin-bottom: 50px; }
+table + h2						{ margin-top: 25px; }

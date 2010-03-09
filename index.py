@@ -141,9 +141,10 @@ class view(webapp.RequestHandler):
 		pedigrees = Pedigree.gql("WHERE owner = :1 AND slug = :2 LIMIT 1", user, slug)
 		for pedigree in pedigrees:
 			html = write_pedigree(pedigree.root, 1, pedigree.gens, '')
+			notes = pedigree.notes
 
 		header_values = get_header_values(self, slug + ' | Pedigree Chart')
-		page_values = { 'slug' : slug, 'html' : html }
+		page_values = { 'slug' : slug, 'html' : html, 'notes' : notes }
 		render_page(self, 'view', header_values, page_values)
 
 
